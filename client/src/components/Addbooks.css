@@ -1,0 +1,14 @@
+.min-vh_100{
+    min-height: 85vh !important;
+}
+    @media only screen and (max-width:570px) {
+        .small{
+        margin-top: 3rem !important;
+        }
+        .width_small{
+            min-width: 100% !important;
+        }
+    }
+    .width_small{
+        width: 25% !important;
+    }

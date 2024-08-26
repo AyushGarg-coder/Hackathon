@@ -1,0 +1,87 @@
+.link:hover {
+    color: red !important;
+}
+
+.Card {
+    max-width: 100%;
+    border-radius: 12px;
+
+    @media screen and (max-width:1280px) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.Card:hover {
+    border: 1px solid black;
+    padding: 1px;
+    transition: padding 0.2s ease-in-out;
+}
+
+.card-title {
+    margin-bottom: 0.5rem !important;
+}
+
+.card-text {
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    width: 100%;
+    /* Ensure button takes full width */
+}
+
+img {
+    border-radius: 12px;
+
+    @media screen and (max-width:767px) {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+.Img-container {
+    @media screen and (max-width:768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.app {
+    @media screen and (max-width:1008px) {
+        justify-content: center;
+
+    }
+}
+
+@media only screen and (max-width:767px) {
+    /* #quantity_box {
+        margin: 0 !important;
+        margin-top: 1rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    } */
+     .banner{
+        height: auto !important;
+     }
+}
+
+@media only screen and (max-width:265px) {
+    .Image{
+        width: auto !important;
+        height: auto !important;
+    }
+    #quantity_box{
+        width: 100% !important;
+    }
+    #quantity_box>input{
+        width: 100% !important;
+    }
+    #quantity_box>button{
+        width: 100% !important;
+         }
+    .banner{
+        height: auto !important;
+    }
+}
