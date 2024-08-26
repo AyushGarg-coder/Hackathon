@@ -29,7 +29,7 @@ const AddMovies = () => {
     const handleClick = async () => {
         try {
             if (movie.title.trim() !== '') {
-                const response = await axios.post('http://localhost:3001/addmovies', movie);
+                const response = await axios.post('https://hackathon-r38q.onrender.com/addmovies', movie);
                 if (response.status === 200) {
                     toast.success('Movie added successfully!', { position: 'top-right' });
                     setMovie(initialValue);
