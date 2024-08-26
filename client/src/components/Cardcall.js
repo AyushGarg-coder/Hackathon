@@ -12,7 +12,7 @@ function Cardcall() {
 useEffect(()=>{
   async function handleContent(){
     try{
-      const result=await axios.get('http://localhost:3001/getmovies');
+      const result=await axios.get('https://hackathon-r38q.onrender.com/getmovies');
       if(result.status===200){
         setPost(result.data)
       }
