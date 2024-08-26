@@ -47,7 +47,7 @@ const Addtocartcard = ({ item, setChange }) => {
         try {
             const user = sessionStorage.getItem('username');
             const id = item._id;
-            const response = await axios.post('http://localhost:3001/removecart', { id, user });
+            const response = await axios.post('https://hackathon-r38q.onrender.com/removecart', { id, user });
             if (response.status === 200) {
                 setChange(true);
             }
@@ -60,7 +60,7 @@ const Addtocartcard = ({ item, setChange }) => {
     const updateItemQuantity = async (id, count) => {
         try {
             const user = sessionStorage.getItem('username');
-            const response = await axios.post('http://localhost:3001/updatequantity', { count, id, user });
+            const response = await axios.post('https://hackathon-r38q.onrender.com/updatequantity', { count, id, user });
             if (response.status === 200) {
                 setChange(true);
             }
