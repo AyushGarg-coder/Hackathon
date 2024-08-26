@@ -28,7 +28,7 @@ const Carddetail = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await axios.get(`http://localhost:3001/moviedata?id=${id}`); // Updated endpoint to movie-specific
+                const result = await axios.get(`https://hackathon-r38q.onrender.com/moviedata?id=${id}`); // Updated endpoint to movie-specific
                 setData(result.data);
                 setPrice(parseFloat(result.data.price));
             } catch (error) {
@@ -57,7 +57,7 @@ const Carddetail = () => {
     const handlePincode = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post('http://localhost:3001/moviedate', { pincode });
+            const result = await axios.post('https://hackathon-r38q.onrender.com/moviedate', { pincode });
             if (result.status === 200) {
                 setResponse('Pincode is valid');
                 toast.success('Pincode validated successfully');
@@ -74,7 +74,7 @@ const Carddetail = () => {
     const handleCart = async () => {
         try {
             const user = sessionStorage.getItem('username');
-            const response = await axios.post('http://localhost:3001/addtocart/save', { data, user });
+            const response = await axios.post('https://hackathon-r38q.onrender.com/addtocart/save', { data, user });
             if (response.status === 200) {
                 toast.success('Added to cart successfully');
             }
