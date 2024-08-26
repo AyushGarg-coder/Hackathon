@@ -14,7 +14,7 @@ const Addtocart = () => {
         async function getdata() {
             try {
                 const user = sessionStorage.getItem('username')
-                const response = await axios.post('http://localhost:3001/addtocart', { user });
+                const response = await axios.post('https://hackathon-r38q.onrender.com/addtocart', { user });
                 if (response.status === 200) {
                     setData(response.data);
                     // console.log(response.data);
