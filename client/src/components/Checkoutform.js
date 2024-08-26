@@ -47,7 +47,7 @@ const CheckoutForm = ({ price, email, username,title,director,img}) => {
                 console.log('Payment Method created:', paymentMethod);
 
 
-                const response = await fetch('http://localhost:3001/api/checkout/submit', {
+                const response = await fetch('https://hackathon-r38q.onrender.com/api/checkout/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
