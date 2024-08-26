@@ -14,7 +14,7 @@ const Profile = () => {
     useEffect(() => {
         async function fetch() {
             try {
-                let response = await axios.post('http://localhost:3001/recentorder');
+                let response = await axios.post('https://hackathon-r38q.onrender.com/recentorder');
                 if (response.status === 200) {
                     // console.log(response.data);
                     setData(response.data);
