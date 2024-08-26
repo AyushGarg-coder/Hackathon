@@ -51,8 +51,3 @@ useEffect(()=>{
 }
 
 export default Cardcall;
-
-
-// stripe id : alksyx5u2h@vvatxiy.com
-// cluster id :alksyx5u2h
-// cluster password:aBVKeDU5OyvKJQOr
