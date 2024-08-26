@@ -74,7 +74,7 @@ export default function Login({ isUserAuthenticated }) {
                 let username = sessionStorage.getItem('username');
                 console.log(token,username)
                 if(token!="" && username!=""){
-                    let response = await axios.post('http://localhost:3001/checkauth',{token})
+                    let response = await axios.post('https://hackathon-r38q.onrender.com/checkauth',{token})
                     if(response.status===200){
                         console.log(response.data)
                         if(response.data==username){
@@ -109,7 +109,7 @@ export default function Login({ isUserAuthenticated }) {
     const Loginfunc = async () => {
         try {
             if (login.username !== "" && login.password !== "") {
-                let response = await axios.post('http://localhost:3001/login', login);
+                let response = await axios.post('https://hackathon-r38q.onrender.com/login', login);
                 if (response.status === 200) {
                     sessionStorage.setItem('auth_token', response.data['token']);
                     sessionStorage.setItem('username', response.data.username)
@@ -137,7 +137,7 @@ export default function Login({ isUserAuthenticated }) {
     const Signupfunc = async () => {
         try {
             if (signup.email !== "" && signup.username !== "" && signup.password !== "") {
-                let response = await axios.post('http://localhost:3001/signup', signup);
+                let response = await axios.post('https://hackathon-r38q.onrender.com/signup', signup);
                 if (response.status === 200) {
                     if(response.data==="Data Saved Successfully"){
                         toast.success("Data Saved Successfully");
