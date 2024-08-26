@@ -30,7 +30,7 @@ export default function Billtocart({ totalquantity, totalamount, length }) {
             const stripe = await loadStripe(process.env.REACT_APP_PUBLIC_KEY);
             const user = sessionStorage.getItem('username');
 //--------------------------------------------add books name function----------------------------------------------------------------------
-            // const response = await axios.post('http://localhost:3001/bill', { user });
+            // const response = await axios.post('https://hackathon-r38q.onrender.com/bill', { user });
             // if (response.status === 200) {
             // console.log(response.data);
             // setBooks(response.data)
