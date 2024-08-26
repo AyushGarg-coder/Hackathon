@@ -25,7 +25,7 @@ const Search = () => {
         async function fetchdata() {
             try {
                 console.log(search);
-                const response = await axios.post(`http://localhost:3001/search`, { search });
+                const response = await axios.post(`https://hackathon-r38q.onrender.com/search`, { search });
                 if (response.status === 200) {
                     // console.log(response.data);
                     setData({ ...data, title: response.data.title, id: response.data._id, time: response.data.time, director: response.data.director, price: response.data.price, url1: response.data.url1 });
